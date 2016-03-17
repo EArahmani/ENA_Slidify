@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+bundleId:
+        https://api.rpubs.com/api/v1/document/161746/a02419bd826b4ea6b0fd1104338e21a9
+url: http://rpubs.com/EliGoli/161746
+when: 1458213280.02354
