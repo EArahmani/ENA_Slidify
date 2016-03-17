@@ -7,64 +7,19 @@ logo        : logoENA.png
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : solarized_light      # {tomorrow}     # 
-widgets     : [mathjax, quiz, bootstrap, shiny, interactive]            # {mathjax, quiz, bootstrap}
+widgets     : [bootstrap, quiz, shiny, interactive]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 assets      : {assets: ../../assets}
 ext_widgets : {rCharts: [libraries/nvd3]}
 --- 
 
-## Read-And-Delete
+## Wind
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+<iframe src = 'file:///H:/RShiny/EnAHRgie/ENA_Slidify/AnsiedlungWindenergie.html' height='600px'></iframe>
 
----  
-
-## Slide 2
-
-publish_github(user = "EArahmani", repo = "git push git@github.com:EArahmani/ER-repo.git gh-pages")
-https://elhamrahmani.shinyapps.io/Analyseraster_model2/
-
-<iframe src = 'https://elhamrahmani.shinyapps.io/Analyseraster_model2/' height='600px'></iframe>
-
---- 
-
-## Slide 3
-
-<iframe src = 'file:///H:/RShiny/EnAHRgie/Hist_Wind/Wind.html' height='600px' width='1000x'></iframe>
-
---- 
-
-## Interactive Chart
-
-```{r echo = F, results = 'asis'}
-require(rCharts)
-haireye <- as.data.frame(HairEyeColor)
-n1 <- nPlot(Freq ~ Hair , group = 'Eye', type = 'multiBarChart',
-            data = subset(haireye, Sex == "Male")
-)
-n1$print('chart1')
-```
-
----&interactive 
-
-## Interactive Chart with Shiny Controls
-
-```{r opts.label = 'shiny'}
-slidifyUI(
-  sidebarPanel(
-    selectInput('sex', 'Choose Sex', c('Male', 'Female')),
-    selectInput('type', 'Choose Type',
-     c('multiBarChart','multiBarHorizontalChart')           
-   )
-  ),
-  mainPanel(
-    tags$div(id = 'nvd3plot', class='shiny-html-output nvd3 rCharts')
-  )
-)
-```
-
+ 
 ---
+
+
 
